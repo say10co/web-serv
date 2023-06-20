@@ -19,6 +19,7 @@ class Response {
 
 	int fd;
 	bool	headears_sent;
+	size_t	last_offset;
 	static std::ifstream static_file;
 
 	static std::string response_chunk;

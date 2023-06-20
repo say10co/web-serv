@@ -20,6 +20,7 @@ class Handler {
     int size;
 
     int fd;
+	std::string file_path;
 
 
     public:
@@ -35,6 +36,7 @@ class Handler {
         std::string getType();
         int getStatus();
         int getFD();
+		const std::string &getFilePaht() const;
 
 		~Handler() {
 

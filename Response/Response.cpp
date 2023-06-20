@@ -52,11 +52,13 @@ Response & Response::operator=(const Response &response) {
 	this->fd = response.fd;
 	this->body = response.body;
 	this->headears_sent =  response.headears_sent;
+	this->last_offset = response.last_offset;
 	return (*this);
 }
 
 Response::Response(std::string body, std::string type, int size, int status, int fd){
 	this->fd = fd;
+	this->last_offset = 0;
 	this->status = std::to_string(status);
 	this->status_message = generateStatusMessage(status);
 	this->contentType = type;
